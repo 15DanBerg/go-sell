@@ -6,6 +6,6 @@ func FindProductByID(c *gin.Context) {
 
 }
 
-func FindAllProduct(c *gin.Context) {
+func FindAllProducts(c *gin.Context) {
 
 }
