@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/15DanBerg/go-sell/domain/product"
-	"github.com/15DanBerg/go-sell/domain/user"
+	"github.com/15DanBerg/go-sell/routes/controller_routes/product"
+	"github.com/15DanBerg/go-sell/routes/controller_routes/user"
 	"github.com/gin-gonic/gin"
 )
 
