@@ -3,7 +3,7 @@ package user
 import (
 	"fmt"
 
-	rest_err "github.com/15DanBerg/go-sell/config/err"
+	"github.com/15DanBerg/go-sell/config/validation"
 	request "github.com/15DanBerg/go-sell/model/request/user"
 	"github.com/gin-gonic/gin"
 )
@@ -13,7 +13,7 @@ func AddingUser(c *gin.Context) {
 
 	err := c.ShouldBindJSON(&userRequest)
 	if err != nil {
-		rest_err := rest_err.NewBadRequestError(fmt.Sprintf("There are some incorrect fields, error=%s\n", err.Error()))
+		rest_err := validation.ValidateError(err)
 
 		c.JSON(rest_err.Code, rest_err)
 		return
